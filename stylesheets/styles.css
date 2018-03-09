@@ -54,7 +54,7 @@ body {
   vertical-align: middle;
   font-size: 14pt;
   font-family: arial;
-  font-weight: regular;
+  font-weight: bold;
   color: white;
 }
 
@@ -62,8 +62,25 @@ body {
   font-weight: bold;
 }
 
-a:link, a:visited, a:hover, a:active {
-  mix-blend-mode: difference;
-  color: white;
-  text-decoration: underline;
+.page {
+  position: relative;
+  background-color: white;
+  transform: translateY(100vh);
+  z-index: 1;
+  height: 800px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .home.tr, .home.br {
+    visibility: hidden;
+  }
+
+  .home.tl, .home.bl {
+    width: 100% !important;
+  }
+
+  .head {
+    font-size: 24pt;
+  }
 }
